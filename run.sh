@@ -8,5 +8,8 @@ echo "$JSON_FILE"
 echo "$DCOS_URL"
 echo "$TIME_LIMIT"
 
-echo "$(python --version)"
-success "\nTest triggered successfully."
+if python script.py $JSON_FILE $DCOS_URL $TIME_LIMIT
+    fail "\nJob error"
+fi
+
+success "\nJob success"
