@@ -1,0 +1,13 @@
+box: python
+
+build:
+  steps:
+    - script:
+        name: prepare output
+        code: rm -rf $WERCKER_ROOT/.git
+
+publish:
+  steps:
+    - internal/publish-step:
+      owner: rdcojocaru
+      private: true

@@ -1,0 +1,17 @@
+name: create-job
+version: 1.0.0
+summary: Create and run a metronome job
+tags:
+  - job
+  - mesosphere
+  - metronome
+properties:
+  - name: json_file
+    type: string
+    required: true
+  - name: dcos_url
+    type: string
+    required: true
+  - name: time_limit
+    type: string
+    required: false
