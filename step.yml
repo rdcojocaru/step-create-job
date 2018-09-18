@@ -1,4 +1,4 @@
-name: create-job
+name: metronome-one-off-job
 version: 1.0.0
 summary: Create and run a metronome job
 tags:
@@ -6,9 +6,6 @@ tags:
   - mesosphere
   - metronome
 properties:
-  - name: script_file
-    type: string
-    required: true
   - name: json_file
     type: string
     required: true
