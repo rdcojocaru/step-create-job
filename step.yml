@@ -6,6 +6,9 @@ tags:
   - mesosphere
   - metronome
 properties:
+  - name: script_file
+    type: string
+    required: true
   - name: json_file
     type: string
     required: true
