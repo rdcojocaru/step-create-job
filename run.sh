@@ -5,9 +5,11 @@ JSON_FILE=$WERCKER_METRONOME_ONE_OFF_JOB_JSON_FILE
 DCOS_URL=$WERCKER_METRONOME_ONE_OFF_JOB_DCOS_URL
 TIME_LIMIT=$WERCKER_METRONOME_ONE_OFF_JOB_TIME_LIMIT
 
+python script.py "$JSON_FILE" "$DCOS_URL" "$TIME_LIMIT"
 
-if python script.py "$JSON_FILE" "$DCOS_URL" "$TIME_LIMIT"; then
-    fail "\nJob error"
+if [ $? -eq 0 ]
+then
+    success "\nJob success"
+else
+    error "\nJob error"
 fi
-
-success "\nJob success"
