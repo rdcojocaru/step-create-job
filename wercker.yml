@@ -5,11 +5,9 @@ build:
     - script:
         name: prepare output
         code: rm -rf $WERCKER_ROOT/.git
-    - script:
-        name: test python version
-        code: python --version
 
 publish:
   steps:
     - internal/publish-step:
       owner: rdcojocaru
+      private: true
