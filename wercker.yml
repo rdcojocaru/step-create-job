@@ -10,4 +10,3 @@ publish:
   steps:
     - internal/publish-step:
       owner: rdcojocaru
-      private: true
