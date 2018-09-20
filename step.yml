@@ -1,5 +1,5 @@
 name: metronome-one-off-job
-version: 1.2.0
+version: 1.2.1
 summary: Create and run a metronome job
 tags:
   - job
