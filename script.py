@@ -80,7 +80,6 @@ while True:
         r = requests.post(stop_url)
         print('Job %s (runId: %s) takes too long to execute - job terminated!' % (job_id, run_id))
         sys.exit(ERROR)
-    print(run_url)
     r = requests.get(run_url)
     # Job is done, check history for status
     if r.status_code != 200:
